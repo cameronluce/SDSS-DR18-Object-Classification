@@ -1,1 +1,1 @@
-this is the list of python dependencies used:
+Pandas Version: 2.3
