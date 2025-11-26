@@ -2,5 +2,5 @@ The dataset used can be found here: https://www.kaggle.com/datasets/bryancimo/sd
 
 Acknowledgements:
 
-Copilot AI; provided by Microsoft, used for debugging
-Chat GPT AI; provided by OpenAI, used for debugging
+- Copilot AI; provided by Microsoft, used for debugging
+- Chat GPT AI; provided by OpenAI, used for debugging
