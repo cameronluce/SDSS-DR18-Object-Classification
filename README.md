@@ -1,4 +1,4 @@
-The dataset used can be found here: https://www.kaggle.com/datasets/bryancimo/sdss-galaxy-classification-dr18?select=sdss_100k_galaxy_form_burst.csv
+The dataset used can be found [here](https://www.kaggle.com/datasets/bryancimo/sdss-galaxy-classification-dr18?select=sdss_100k_galaxy_form_burst.csv).
 
 ## Acknowledgements:
 
@@ -7,7 +7,7 @@ The dataset used can be found here: https://www.kaggle.com/datasets/bryancimo/sd
 - Chat GPT AI; provided by OpenAI, used for debugging
 
 ## Contact Details:
-Cameron Luce
-cameronaluce@outlook.com
-Mphys Physics, Astrophysics and Cosmology
+Cameron Luce\
+cameronaluce@outlook.com\
+Mphys Physics, Astrophysics and Cosmology\
 University of Portsmouth
