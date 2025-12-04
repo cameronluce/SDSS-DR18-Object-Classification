@@ -4,7 +4,7 @@ The dataset used can be found [here](https://www.kaggle.com/datasets/diraf0/sloa
 
 ## Acknowledgements:
 
-- Coleman Krawczyk; understanding of concepts utilised
+- Coleman Krawczyk; understanding of concepts utilised and assistance with debugging
 - Dan Tassie; provided assistance with understanding the coursework structure and format
 - GitHub Copilot; provided by Microsoft, used for debugging
 - Chat GPT; provided by OpenAI, used for debugging
