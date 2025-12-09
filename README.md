@@ -1,10 +1,13 @@
-The dataset used can be found [here](https://www.kaggle.com/datasets/bryancimo/sdss-galaxy-classification-dr18?select=sdss_100k_galaxy_form_burst.csv).
+The dataset used can be found [here](https://www.kaggle.com/datasets/diraf0/sloan-digital-sky-survey-dr18?select=SDSS_DR18.csv).
+
+
 
 ## Acknowledgements:
 
-- Dan Tassie; provided assistance with understanding the coursework structure
-- Copilot AI; provided by Microsoft, used for debugging
-- Chat GPT AI; provided by OpenAI, used for debugging
+- Coleman Krawczyk; understanding of concepts utilised and assistance with debugging
+- Dan Tassie; provided assistance with understanding the coursework structure and format
+- GitHub Copilot; provided by Microsoft, used for debugging
+- Chat GPT; provided by OpenAI, used for debugging
 
 ## Contact Details:
 Cameron Luce\
