@@ -180,26 +180,4 @@ def trainingDataSizeAffect(model, trainData, testLoader, fractions, criteria, op
         confMatrix = confusion_matrix(allLabels, allPredictions)
         confMatrices.append((i, confMatrix))
     
-    plt.figure(figsize = (12, 6))
-    plt.subplot(1, 2, 1)
-    plt.plot(fractions, trainAccuracy, marker = 'o', label = 'Training Accuracy', color = 'forestgreen')
-    plt.plot(fractions, testAccuracy, marker ='o', label = 'Testing Accuracy', color = 'goldenrod')
-    plt.title("Effect of Training Data Size on Accuracy")
-    plt.xlabel("Fraction of Training Data Used")
-    plt.ylabel("Accuracy")
-    plt.legend()
-    plt.grid()
-    
-    plt.subplot(1, 2, 2)
-    plt.plot(fractions, trainLoss, marker = 'o', label = 'Training Loss', color = 'forestgreen')
-    plt.plot(fractions, testLoss, marker ='o', label = 'Testing Loss', color = 'goldenrod')
-    plt.title("Effect of Training Data Size on Loss")
-    plt.xlabel("Fraction of Training Data Used")
-    plt.ylabel("Loss")
-    plt.legend()
-    plt.grid()
-
-    plt.tight_layout()
-    plt.show()
-    
-    return confMatrices
+    return confMatrices, trainAccuracy, trainLoss, testAccuracy, testLoss
