@@ -22,7 +22,27 @@ Our primary goals for this project are to:
 - **Perform a research question:** we want to address how choices about our data affect the performance of our NN, specifically the amount of training data chosen and the balance of our classes.
 
 ## Our chosen dataset:
+We are using the eighteenth data release from the Sloan Digital Sky Survey (SDSS), containing ~100,000 astronomical objects, with each being classed as either a `STAR`, `GALAXY` or `QSO` also known as a Quasar. This data relase is the first data released from the fifth phase of SDSS's lifecycle (SDSS-V), released on the 19th of January 2023. Our specific dataset contains 43 features we can choose from, from which we narrow down to 7. These being the `u, g, r, i, z` bands of light, the `redshift` and the `class` of each object. These are further defined below:
 
+|Feature|Description|
+|---|---|
+|`u`|The magnitude in ultraviolet band|
+|`g`|The magnitude in the green optical band|
+|`r`|The magnitude in the red optical band|
+|`i`|The magnitude in the near-infrared band|
+|`z`|The magnitude in the infrared band|
+|`redshift`|Redshift of the object|
+|`class`|Class of the object|
+
+Our first rows of the dataset are seen below:
+
+
+
+## Dependencies:
+
+
+## License:
+This project is under the MIT license, see `LICENSE` for more.
 
 ## Acknowledgements:
 
