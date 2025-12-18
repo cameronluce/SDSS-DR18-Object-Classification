@@ -1,6 +1,6 @@
-The dataset used can be found [here](https://www.kaggle.com/datasets/diraf0/sloan-digital-sky-survey-dr18?select=SDSS_DR18.csv).
+## SDSS DR18 Object Classification by Neural and Non-Neural Methods
 
-
+In this repository, we classify Stars, Galaxies and Quasars using data from the Sloan Digital Sky Survey (SDSS) data-release 18 (DR18), which can be found [here](https://www.kaggle.com/datasets/diraf0/sloan-digital-sky-survey-dr18?select=SDSS_DR18.csv).
 
 ## Acknowledgements:
 

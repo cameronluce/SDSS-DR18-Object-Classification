@@ -4,3 +4,4 @@ Seaborn version: 0.13.2
 Pandas version: 2.3.3
 Matplotlib version: 3.10.7
 NumPy version: 2.3.4
+KaggleHub version: 0.3.13
