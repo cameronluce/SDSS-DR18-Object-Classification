@@ -34,12 +34,31 @@ We are using the eighteenth data release from the Sloan Digital Sky Survey (SDSS
 |`redshift`|Redshift of the object|
 |`class`|Class of the object|
 
-Our first rows of the dataset are seen below:
+Our first rows of the dataset with our chosen features are seen below:
 
+| u        | g        | r        | i        | z        | redshift  | class  |
+|----------|----------|----------|----------|----------|-----------|--------|
+| 18.87062 | 17.59612 | 17.11245 | 16.83899 | 16.70908 | 0.041691  | GALAXY |
+| 19.59560 | 19.92153 | 20.34448 | 20.66213 | 20.59599 | -0.000814 | STAR   |
+| 19.26421 | 17.87891 | 17.09593 | 16.65159 | 16.35329 | 0.113069  | GALAXY |
+| 19.49739 | 17.96166 | 17.41269 | 17.20545 | 17.11567 | 0.000087  | STAR   |
+| 18.31519 | 16.83033 | 16.26352 | 16.06320 | 15.97527 | 0.000018  | STAR   |
 
+We only plan to use the magnitudes since the redshift's feature importance is incredibly high, and the class is our target so won't be used to test our non-NN and NN.
 
 ## Dependencies:
+PyTorch version: 2.9.0+cpu
+Scikit-learn version: 1.7.2
+Seaborn version: 0.13.2
+Pandas version: 2.3.3
+Matplotlib version: 3.10.7
+NumPy version: 2.3.4
+KaggleHub version: 0.3.13
 
+## Using this repository:
+To clone the repository for your own use, use the following command if not done on github.con: `git clone https://github.com/cameronluce/SDSS-DR18-Object-Classification.git.
+
+Ensure you also `pip install` all the dependencies listed above and in `dependencies.txt`, with the command `!pip install` followed by the library you wish to install.
 
 ## License:
 This project is under the MIT license, see `LICENSE` for more.
@@ -47,9 +66,9 @@ This project is under the MIT license, see `LICENSE` for more.
 ## Acknowledgements:
 
 - Coleman Krawczyk; understanding of concepts utilised and assistance with debugging
-- Dan Tassie; provided assistance with understanding the coursework structure and format
+- Dan Tassie; provided assistance with understanding the coursework structure and formatting
 - GitHub Copilot; provided by Microsoft, used for debugging
-- Chat GPT; provided by OpenAI, used for debugging
+- Chat GPT; provided by OpenAI, used for debugging and help with plot formatting
 
 ## Contact Details:
 Cameron Luce\
