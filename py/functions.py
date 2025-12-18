@@ -56,24 +56,24 @@ def printParameters(clf): #prints the parameters of the model used
 class NeuralNetworkClassifier(nn.Module): #defines the neural network being used
     def __init__(self):
         super(NeuralNetworkClassifier, self).__init__()
-        self.fc1 = nn.Linear(5, 64)
-        self.fc2 = nn.Linear(64, 32)
-        self.fc3 = nn.Linear(32, 3)
-        self.relu = nn.ReLU()
-        self.dropout = nn.Dropout(0.3)
+        self.fc1 = nn.Linear(5, 64) #creates the first layer, with 5 input features and 64 output neurons
+        self.fc2 = nn.Linear(64, 32) #creates second layer, with 64 inputs and 32 outputs
+        self.fc3 = nn.Linear(32, 3) #creates third layer, with 32 inputs and 3 outputs
+        self.relu = nn.ReLU() #defines the ReLu activation function, this replaces negative values with zero
+        self.dropout = nn.Dropout(0.3) #defines the dropout layer, with a probability of setting 30% of neurons to 0
     
     def forward(self, z):
-        z = self.relu(self.fc1(z))
-        z = self.dropout(z)
-        z = self.relu(self.fc2(z))
-        z = self.fc3(z)
+        z = self.relu(self.fc1(z)) #passes an input z through the first layer and applies relu
+        z = self.dropout(z) #applies droputout to the output
+        z = self.relu(self.fc2(z)) #passes data through second layer and applies relu
+        z = self.fc3(z) #passes data through the final layer
         return z
 
 def modelTraining(model, trainLoader, criteria, optimiser, epochs): #trains the neural network on our dataset
     model.train()
     lossHistory = []
     
-    for i in range(epochs):
+    for i in range(epochs): #trains model over each epoch, refining it with each epoch
         runningLoss = 0.0
         for inputs, labels in trainLoader:
             optimiser.zero_grad()
@@ -84,8 +84,8 @@ def modelTraining(model, trainLoader, criteria, optimiser, epochs): #trains the 
             runningLoss += loss.item()
         
         epochLoss = runningLoss / len(trainLoader)
-        lossHistory.append(epochLoss)
-        print(f"Epoch {i+1}/{epochs}, loss = {epochLoss:.3f}")
+        lossHistory.append(epochLoss) #stores loss at this epoch
+        print(f"Epoch {i+1}/{epochs}, loss = {epochLoss:.3f}") #prints loss at epoch
     return lossHistory
 
 def modelEvaluationNN(model, testLoader, labelEncoder): #evaluates the model compared to the dataset
@@ -110,8 +110,8 @@ def modelEvaluationNN(model, testLoader, labelEncoder): #evaluates the model com
     print("Classification Report:")
     print(skl_cr(labelList, predictionList, target_names = labelEncoder.classes_), "\n")
     
-    conf_matrix = confusion_matrix(labelList, predictionList)
-    sns.heatmap(conf_matrix, annot = True, fmt = "d", cmap = "Greens", xticklabels = labelEncoder.classes_, yticklabels = labelEncoder.classes_)
+    conf_matrix = confusion_matrix(labelList, predictionList) #creates confusion matrix
+    sns.heatmap(conf_matrix, annot = True, fmt = "d", cmap = "Greens", xticklabels = labelEncoder.classes_, yticklabels = labelEncoder.classes_) #plots confusion matrix
     plt.title("Confusion Matrix")
     plt.xlabel("Predicted Class")
     plt.ylabel("True Class")
@@ -124,7 +124,7 @@ def trainingDataSizeAffect(model, trainData, testLoader, fractions, criteria, op
     testLoss = [] #stores loss of testing
     confMatrices = [] #stores confusion matrices
     
-    for i in fractions:
+    for i in fractions: #runs through model training for each fraction of the training data
         subsetSize = int(len(trainData) * i)
         subsetData, _ = torch.utils.data.random_split(trainData, [subsetSize, len(trainData) - subsetSize])
         subsetLoad = DataLoader(subsetData, batch_size = 64, shuffle = True)
@@ -180,4 +180,4 @@ def trainingDataSizeAffect(model, trainData, testLoader, fractions, criteria, op
         confMatrix = confusion_matrix(allLabels, allPredictions)
         confMatrices.append((i, confMatrix))
     
-    return confMatrices, trainAccuracy, trainLoss, testAccuracy, testLoss
+    return confMatrices, trainAccuracy, trainLoss, testAccuracy, testLoss #returns all the data gathered from training of the fractions of training data
