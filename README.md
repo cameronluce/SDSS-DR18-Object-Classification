@@ -56,7 +56,7 @@ NumPy version: 2.3.4
 KaggleHub version: 0.3.13
 
 ## Using this repository:
-To clone the repository for your own use, use the following command if not done on github.con: `git clone https://github.com/cameronluce/SDSS-DR18-Object-Classification.git.
+To clone the repository for your own use, use the following command if not done on github.com: `git clone https://github.com/cameronluce/SDSS-DR18-Object-Classification.git`.
 
 Ensure you also `pip install` all the dependencies listed above and in `dependencies.txt`, with the command `!pip install` followed by the library you wish to install.
 
